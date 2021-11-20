@@ -4,9 +4,11 @@ This study attempts to explore the fairness of pre-trained word embedding models
 
 # Fair Pre-trained Word Embeddings
 We can infer from this data that fastText pre- trained word embeddings perform the best with respect to three of the four most used bias metrics. According to SemBias and ECT scores, FastText Common Crawl is the least biased. Using the same corpus but with addition of subword information, the embed- dings has the least biased according to WEAT Test 6. Furthermore, FastText Wiki News is least biased on WEAT Test 5. In addition, the embeddings has the least bias on WEAT Test 3, Test 4, and Test 10 while including subword information.
+![Screenshot 2021-11-15 at 12 39 59](https://user-images.githubusercontent.com/31917225/142721013-f58a51c0-3a96-4ca9-aca7-df87d8e3af3b.png)
 
 # The Effect of Parameters on the Fairness
 ## Vector Length
 Most observations from the WEAT, Sembias, Direct Bias, and ECT scores indicate evidence for improved fairness in pre-trained word embeddings when the number of dimensions is increased. This result implies that lower dimensionality word em- beddings are not expressive enough to capture all word associations and analogies, and that when the bias metric is applied to them, they become more biased than embeddings with larger dimensions.
 ## Subword Informations
 Five of the eight observations found that using subword information results in less biased word embeddings, while three of the eight observations found the opposite. The corpus used to produce the word embeddings may have hampered our findings. These results therefore need to be interpreted with caution. It might be related to the main purpose of subword model in fastText developed by [Bojanowski et al. 2017], which is to learn more reliable representation for rare words that does not necessarily correspond to fairer representation. Due to inconsistency of the results, it is unclear whether the usage of subword improves or degrades the fairness of an embedding.
+![Screenshot 2021-11-15 at 12 40 15](https://user-images.githubusercontent.com/31917225/142721025-aa152ec9-d364-4f06-b831-1b1b3de4291d.png)
